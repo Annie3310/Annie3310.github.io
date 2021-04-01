@@ -1,0 +1,392 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title> 进程和线程 | Gridea</title>
+<link rel="shortcut icon" href="https://Annie3310.github.io/favicon.ico?v=1617258170777">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://Annie3310.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title=" 进程和线程 | Gridea - Atom Feed" href="https://Annie3310.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="多线程是提升效率的重要手段
+
+
+
+
+什么是进程?
+什么是线程
+
+进程与子进程
+
+
+进程和线程的区别
+
+
+多线程
+
+多线程的创建
+
+
+
+
+什么是进程?
+
+进程就是计算机正在运行的一个独立的应用程序
+进程的生命周期就是使用该软件的整个过程
+
+什..." />
+    <meta name="keywords" content="Java基础" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://Annie3310.github.io">
+  <img class="avatar" src="https://Annie3310.github.io/images/avatar.png?v=1617258170777" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/article" class="menu">
+          文章
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+               进程和线程
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-04-01
+              </span>
+              <span>
+                4 min read
+              </span>
+              
+                <a href="https://Annie3310.github.io/tag/GIGVmgtsP/" class="post-tag">
+                  # Java基础
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>多线程是提升效率的重要手段</p>
+<!-- more -->
+<p><ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E8%BF%9B%E7%A8%8B">什么是进程?</a></li>
+<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E7%BA%BF%E7%A8%8B">什么是线程</a>
+<ul>
+<li><a href="#%E8%BF%9B%E7%A8%8B%E4%B8%8E%E5%AD%90%E8%BF%9B%E7%A8%8B">进程与子进程</a></li>
+</ul>
+</li>
+<li><a href="#%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%8C%BA%E5%88%AB">进程和线程的区别</a></li>
+</ul>
+</li>
+<li><a href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B">多线程</a>
+<ul>
+<li><a href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%88%9B%E5%BB%BA">多线程的创建</a></li>
+</ul>
+</li>
+</ul>
+</p>
+<h2 id="什么是进程">什么是进程?</h2>
+<ul>
+<li>进程就是计算机正在运行的一个独立的应用程序</li>
+<li>进程的生命周期就是使用该软件的整个过程</li>
+</ul>
+<h2 id="什么是线程">什么是线程</h2>
+<ul>
+<li>线程是组成进程的基本单位，可以完成特定的功能，一个进程是由一个或多个线程组成的</li>
+</ul>
+<blockquote>
+<p>应用程序是静态的,进程和线程是动态的<br>
+有创建,有销毁,它的存在是暂时的</p>
+</blockquote>
+<h3 id="进程与子进程">进程与子进程</h3>
+<blockquote>
+<p>IDEA为进程,IDEA下有一Spring Boot子进程,Spring Boot包含多个线程<br>
+<img src="https://Annie3310.github.io/post-images/1617257402497.png" alt="" loading="lazy"></p>
+</blockquote>
+<h2 id="进程和线程的区别">进程和线程的区别</h2>
+<ul>
+<li>进程在运行时拥有独立的内存空间,每个进程所占用的内存空间都是独立的,互不干扰.</li>
+<li>线程共享内存空间,每个线程的执行都是相互独立的</li>
+</ul>
+<h1 id="多线程">多线程</h1>
+<blockquote>
+<p>多线程是指在一个进程中,多个线程同时执行<br>
+(同时执行并不是真正意义上的同时执行),系统会为每个线程分配CPU资源,在某个具体的时间段内,CPU资源会被一个线程占用,在不同的时间段内,由不同的线程来占用CPU资源,所以多个线程是在交替执行</p>
+</blockquote>
+<h2 id="多线程的创建">多线程的创建</h2>
+<ul>
+<li>继承Thread类</li>
+</ul>
+<p>执行顺序</p>
+<p>继承Thread类 —&gt; 重写run()方法 —&gt; 调用start()方法启动线程</p>
+<pre><code class="language-java">package com.wjy;
+
+public class Test extends Thread{
+    /**
+     * run方法,线程体
+     */
+    @Override
+    public void run() {
+        for (int i = 0; i &lt; 20; i++) {
+            System.out.println(&quot;看代码---&quot;+i);
+        }
+    }
+
+    /**
+     * 主方法,主线程
+     * @param args
+     */
+    public static void main(String[] args) {
+        //创建一个对象,调用start方法开启线程
+        Test test=new Test();
+        test.start();
+
+        for (int i = 0; i &lt; 20; i++) {
+            System.out.println(&quot;我在学习多线程---&quot;+i);
+        }
+
+    }
+
+}
+
+</code></pre>
+<p>‼️上述代码中,main函数执行了20次的for循环,可能会出现以下结果</p>
+<pre><code class="language-bash">我在学习多线程---0
+我在学习多线程---1
+我在学习多线程---2
+我在学习多线程---3
+我在学习多线程---4
+我在学习多线程---5
+我在学习多线程---6
+我在学习多线程---7
+我在学习多线程---8
+我在学习多线程---9
+我在学习多线程---10
+我在学习多线程---11
+我在学习多线程---12
+我在学习多线程---13
+我在学习多线程---14
+我在学习多线程---15
+我在学习多线程---16
+我在学习多线程---17
+我在学习多线程---18
+我在学习多线程---19
+看代码---0
+看代码---1
+看代码---2
+看代码---3
+看代码---4
+看代码---5
+看代码---6
+看代码---7
+看代码---8
+看代码---9
+看代码---10
+看代码---11
+看代码---12
+看代码---13
+看代码---14
+看代码---15
+看代码---16
+看代码---17
+看代码---18
+看代码---19
+
+</code></pre>
+<p>‼️但如果执行2000次,会出现以下结果</p>
+<pre><code class="language-bash">我在学习多线程---1028
+我在学习多线程---1029
+我在学习多线程---1030
+我在学习多线程---1031
+看代码---0
+看代码---1
+看代码---2
+看代码---3
+我在学习多线程---1032
+我在学习多线程---1033
+我在学习多线程---1034
+
+</code></pre>
+<p>‼️CPU交替执行两个线程,从而实现多线程的效果(线程不一定先执行,由CPU调度安排)</p>
+<ul>
+<li>实现Runnable接口</li>
+<li>实现Callable接口</li>
+</ul>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E8%BF%9B%E7%A8%8B">什么是进程?</a></li>
+<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E7%BA%BF%E7%A8%8B">什么是线程</a>
+<ul>
+<li><a href="#%E8%BF%9B%E7%A8%8B%E4%B8%8E%E5%AD%90%E8%BF%9B%E7%A8%8B">进程与子进程</a></li>
+</ul>
+</li>
+<li><a href="#%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%8C%BA%E5%88%AB">进程和线程的区别</a></li>
+</ul>
+</li>
+<li><a href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B">多线程</a>
+<ul>
+<li><a href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%88%9B%E5%BB%BA">多线程的创建</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://Annie3310.github.io/post/hello-gridea/">
+              <h3 class="post-title">
+                Hello Gridea
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '66a4caeb14ef3ac34842',
+    clientSecret: 'bb38aab4be2375bcfdcf98c6fcac2f97cd5055e5',
+    repo: 'Annie3310.github.io',
+    owner: 'Annie3310',
+    admin: ['Annie3310'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://Annie3310.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
